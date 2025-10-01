@@ -1,9 +1,49 @@
+.board-wrap {
+  width: 780px;
+  margin: 16px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scorebar {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.score {
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 6px 14px;
+  min-width: 170px;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 68px 84px;
+  justify-content: center;
+  align-items: end;
+}
 
 .hole {
-  background: url("/hole.png") no-repeat center/contain;
+  position: relative;
+  width: 180px;
+  height: 92px;
+  cursor: pointer;
+  background: url("/hole.png") no-repeat center / contain;
 }
 
 .mole {
-  background-image: url("/mole.png");
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  width: 140px;
+  height: 160px;
+  background: url("/mole.png") no-repeat center / contain;
+  pointer-events: none;
 }
-
